@@ -1,0 +1,33 @@
+server:
+  port: 9091
+
+spring:
+  datasource:
+    url: jdbc:postgresql://iif2y23uv2.soyys8vz68.tsdb.cloud.timescale.com:31068/tsdb?currentSchema=public&sslmode=require
+    username: tsdbadmin
+    password: egmvid4iwoti9lml
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 30000  # Adjusted to a typical connection timeout value
+
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    hibernate:
+      ddl-auto: update  # Option to create/update schema on startup
+      show-sql: true     # Enable SQL logging
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  level:
+    org.hibernate: DEBUG
+    org.springframework.orm.jpa: DEBUG
+
+
+
+
+
+#  String CONN_URL = "jdbc:postgres://xnof3ltzxu.soyys8vz68.tsdb.cloud.timescale.com:34424/tsdb?sslmode=require&user=tsdbadmin&password=fb78duhzviapxk2u"
+
