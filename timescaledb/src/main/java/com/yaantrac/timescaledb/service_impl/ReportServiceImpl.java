@@ -20,7 +20,7 @@ public class ReportServiceImpl implements ReportService {
     public ResponseEntity<APIResponse> getMovementReport(Long startDate, Long endDate, List<String> deviceID, Integer pageNo, Integer pageSize, String sortBy) {
         try {
             List<MovementReport> movementReports = criteriaBuilder.getMovementReport(startDate, endDate, deviceID, pageNo, pageSize, sortBy);
-            log.info("Push Ngrok R");
+            log.info("Push Ngrok 5g");
             return ResponseEntity.ok(new APIResponse("success", "No Error", "Data Fetched successfully", movementReports));
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
