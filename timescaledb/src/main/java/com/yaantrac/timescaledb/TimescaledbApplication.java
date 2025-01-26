@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class TimescaledbApplication {
 
     public static void main(String[] args) {
-
+        Thread.currentThread().setName("MAIN");
         SpringApplication.run(TimescaledbApplication.class, args);
     }
 
